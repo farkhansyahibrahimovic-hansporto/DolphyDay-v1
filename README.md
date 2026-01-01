@@ -23,9 +23,9 @@ Manajemen pengguna
 Cara Clone dan Menjalankan Project
 1. Clone Repository
 
-git clone https://github.com/username/DolphiDay.git
+git clone https://github.com/farkhansyahibrahimovic-hansporto/DolphyDay-v1.git
 
-cd DolphiDay
+cd DolphiDay-v1
 
 3. Install Dependency
 
