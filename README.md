@@ -34,70 +34,54 @@ cp .env.example .env
 php artisan key:generate
 
 4. Konfigurasi Database (MySQL)
-
 Edit file .env:
-
 DB_CONNECTION=mysql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3306
+
 DB_DATABASE=dolphiday
+
 DB_USERNAME=root
+
 DB_PASSWORD=
 
-5. Migrasi dan Seeder
+6. Migrasi dan Seeder
 php artisan migrate
 php artisan db:seed
 
-6. Build Asset dan Jalankan
+7. Build Asset dan Jalankan
 npm run dev
 php artisan serve
 
 
 Akses aplikasi:
-
 http://localhost:8000
 
 Akun Login (Sesuai Seeder)
 Admin Account
-
 (Dibuat oleh AdminSeeder)
-
 Email: admin@dolphiday.com
-
 Password: password
-
 Role: admin
 
-Catatan: Disarankan mengganti password setelah login pertama.
-
 User Account
-
 (Dibuat oleh UserSeeder)
-
 Email: user@example.com
-
 Password: password
-
 Role: user
 
 User ini sudah memiliki:
-
 Beberapa micro actions (selesai dan belum selesai)
-
 Beberapa growth logs dengan berbagai mood
-
 Data contoh untuk keperluan demo dan pengujian
 
 Keamanan Singkat
-
 Password di-hash menggunakan bcrypt
-
 CSRF protection aktif
-
 Validasi input pada form
-
-Admin bersifat read-only terhadap data pengguna
+Admin bersifat CRUD terhadap data pengguna
 
 Lisensi
-
-MIT License
+By Farkhansyah Ibrahimovic
