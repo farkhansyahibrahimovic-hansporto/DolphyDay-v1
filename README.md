@@ -1,205 +1,103 @@
-DolphiDay 🌊
+DolphiDay
 
-Your gentle companion for building meaningful habits
+DolphiDay adalah aplikasi web pendamping kebiasaan yang membantu pengguna membangun kebiasaan kecil yang bermakna dengan pendekatan lembut, reflektif, dan tidak menghakimi.
+Aplikasi ini tidak menekankan streak atau target kaku. Fokus utama DolphiDay adalah kehadiran, refleksi diri, dan pertumbuhan bertahap melalui micro actions serta catatan refleksi harian.
 
-DolphiDay adalah aplikasi web yang membantu Anda membangun kebiasaan kecil yang bermakna dengan pendekatan yang lembut, reflektif, dan tidak menghakimi. Kami percaya bahwa pertumbuhan dimulai dari kehadiran, bukan kesempurnaan.
+Prinsip utama:
+Langkah kecil lebih berkelanjutan
+Refleksi lebih penting dari performa
+Progres lebih bernilai daripada kesempurnaan
 
-🎯 Tentang DolphiDay
-DolphiDay dirancang untuk mereka yang ingin membangun kebiasaan positif tanpa tekanan streak atau target yang kaku. Aplikasi ini memberikan ruang untuk:
+Gambaran Fitur
+Pengguna
+Membuat dan mengelola micro actions
+Menandai penyelesaian tanpa tekanan waktu
+Menulis growth log dengan mood tracking
+Melihat progres melalui dashboard personal
 
-Melangkah dengan lembut - Fokus pada micro actions yang mudah dilakukan
-Merefleksikan perjalanan - Mencatat growth logs dengan mood tracking
-Tumbuh tanpa tekanan - Tidak ada streak yang membuat cemas
-Menghargai prosesnya - Setiap langkah kecil adalah pencapaian
+Admin
+Monitoring aktivitas pengguna
+Melihat data micro actions dan growth logs (read-only)
+Manajemen pengguna
 
+Cara Clone dan Menjalankan Project
+1. Clone Repository
+git clone https://github.com/username/DolphiDay.git
+cd DolphiDay
 
-✨ Fitur Utama
-Untuk Pengguna
-🎯 Micro Actions
+2. Install Dependency
+composer install
+npm install
 
-Buat action kecil yang mudah dicapai
-Tandai sebagai selesai kapan saja
-Lihat riwayat pencapaian mingguan
-Edit atau hapus action sesuai kebutuhan
+3. Setup Environment
+cp .env.example .env
+php artisan key:generate
 
-📝 Growth Logs
+4. Konfigurasi Database (MySQL)
 
-Tulis refleksi harian Anda
-Pilih mood: peaceful, hopeful, content, growing, atau struggling
-Lihat timeline perjalanan pertumbuhan
-Mood calendar untuk tracking emosi
+Edit file .env:
 
-👤 Profile Management
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=dolphiday
+DB_USERNAME=root
+DB_PASSWORD=
 
-Update informasi profil
-Upload avatar personal
-Dashboard yang dipersonalisasi
+5. Migrasi dan Seeder
+php artisan migrate
+php artisan db:seed
 
-Untuk Admin
-📊 Dashboard Monitoring
-
-Statistik pengguna aktif
-Total micro actions yang dibuat
-Tingkat penyelesaian keseluruhan
-Insight tentang aktivitas pengguna
-
-👥 User Management
-
-Lihat daftar semua pengguna
-Akses detail profil pengguna (read-only)
-Monitor aktivitas dan progress
-
-
-🎨 Filosofi Design
-DolphiDay menggunakan pendekatan Ocean Therapy dalam desainnya:
-
-Warna lembut - Palet ocean, sky, coral, dan peach yang menenangkan
-Rounded corners - Bentuk organik yang ramah
-Tipografi friendly - Fredoka untuk header, DM Sans untuk body
-Pesan mendukung - Bahasa yang encouraging, bukan judgmental
+6. Build Asset dan Jalankan
+npm run dev
+php artisan serve
 
 
-"Presence over Performance | Growth over Goals | Gentle over Grinding"
+Akses aplikasi:
 
+http://localhost:8000
 
-🚀 Instalasi
-Prasyarat
-Pastikan sistem Anda sudah terinstall:
+Akun Login (Sesuai Seeder)
+Admin Account
 
-PHP >= 8.2
-Composer
-Node.js & NPM
-PostgreSQL
-Git
-
-Langkah Instalasi
-
-Clone Repository
-
-bash   git clone https://github.com/username/dolphiday.git
-   cd dolphiday
-
-Install Dependencies
-
-bash   composer install
-   npm install
-
-Environment Setup
-
-bash   cp .env.example .env
-   php artisan key:generate
-```
-
-4. **Konfigurasi Database**
-   
-   Edit file `.env` dan sesuaikan dengan database PostgreSQL Anda:
-```
-   DB_CONNECTION=pgsql
-   DB_HOST=127.0.0.1
-   DB_PORT=5432
-   DB_DATABASE=dolphiday
-   DB_USERNAME=your_username
-   DB_PASSWORD=your_password
-
-Setup Database
-
-bash   php artisan migrate
-   php artisan db:seed --class=AdminSeeder
-
-Create Storage Link
-
-bash   php artisan storage:link
-
-Build Assets
-
-bash   npm run dev
-
-Jalankan Aplikasi
-
-bash   php artisan serve
-
-Akses Aplikasi
-Buka browser dan kunjungi: http://localhost:8000
-
-Akun Default
-Admin Account:
+(Dibuat oleh AdminSeeder)
 
 Email: admin@dolphiday.com
+
 Password: password
 
-User Account:
+Role: admin
 
-Silakan registrasi melalui halaman /register
+Catatan: Disarankan mengganti password setelah login pertama.
 
+User Account
 
-💡 Cara Menggunakan
-Untuk Pengguna Baru
+(Dibuat oleh UserSeeder)
 
-Registrasi - Buat akun baru di /register
-Setup Profile - Upload avatar dan lengkapi profil Anda
-Buat Micro Action - Mulai dengan 1-3 action kecil yang ingin Anda lakukan
-Check-in Harian - Tandai action yang sudah selesai
-Refleksi - Tulis growth log untuk merekam perjalanan Anda
+Email: user@example.com
 
-Untuk Admin
+Password: password
 
-Login dengan akun admin
-Monitor Dashboard - Lihat statistik keseluruhan
-Kelola Users - Lihat dan monitor aktivitas pengguna
-Review Activity - Pantau tingkat engagement dan completion rate
+Role: user
 
+User ini sudah memiliki:
 
-🌟 Mengapa DolphiDay?
-Perbedaan dengan Habit Tracker Lainnya
-AspekHabit Tracker LainDolphiDayPendekatanTarget & StreakPresence & ReflectionPressureTinggi (jangan putus streak!)Rendah (hadir saja cukup)FokusKuantitasKualitas pengalamanToneMotivationalCompassionateGoalAchieve perfectionEmbrace progress
-Untuk Siapa DolphiDay?
-✨ Ideal untuk:
+Beberapa micro actions (selesai dan belum selesai)
 
-Orang yang mudah overwhelmed dengan habit tracking tradisional
-Mereka yang ingin fokus pada kesehatan mental
-Individu yang menghargai refleksi dan mindfulness
-Siapa saja yang ingin tumbuh dengan lembut
+Beberapa growth logs dengan berbagai mood
 
-❌ Mungkin tidak cocok untuk:
+Data contoh untuk keperluan demo dan pengujian
 
-Mereka yang butuh kompetisi dan gamification
-Yang mencari tracker dengan banyak integrasi dan automasi
-Pengguna yang lebih suka pendekatan hard discipline
+Keamanan Singkat
 
+Password di-hash menggunakan bcrypt
 
-🛡️ Keamanan & Privacy
+CSRF protection aktif
 
-Password hashing dengan bcrypt
-CSRF protection di semua forms
-Session management yang aman
-Input validation untuk mencegah injection
-Admin read-only - privacy pengguna terjaga
+Validasi input pada form
 
+Admin bersifat read-only terhadap data pengguna
 
-🤝 Kontribusi
-Kami menerima kontribusi! Jika Anda ingin berkontribusi:
+Lisensi
 
-Fork repository ini
-Buat branch untuk fitur Anda (git checkout -b feature/AmazingFeature)
-Commit perubahan Anda (git commit -m 'Add some AmazingFeature')
-Push ke branch (git push origin feature/AmazingFeature)
-Buat Pull Request
-
-
-📝 License
-Proyek ini dilisensikan di bawah MIT License.
-
-💬 Dukungan
-Jika Anda menemui masalah atau memiliki pertanyaan:
-
-Issues: GitHub Issues
-Discussions: GitHub Discussions
-
-
-🙏 Acknowledgments
-Terima kasih kepada:
-
-Laravel framework dan komunitasnya
-Tailwind CSS untuk sistem design yang powerful
-Semua kontributor yang telah membantu mengembangkan DolphiDay
-
+MIT License
