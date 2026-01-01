@@ -22,19 +22,27 @@ Manajemen pengguna
 
 Cara Clone dan Menjalankan Project
 1. Clone Repository
+
 git clone https://github.com/username/DolphiDay.git
+
 cd DolphiDay
 
-2. Install Dependency
+3. Install Dependency
+
 composer install
+
 npm install
 
-3. Setup Environment
+5. Setup Environment
+   
 cp .env.example .env
+
 php artisan key:generate
 
-4. Konfigurasi Database (MySQL)
+7. Konfigurasi Database (MySQL)
+   
 Edit file .env:
+
 DB_CONNECTION=mysql
 
 DB_HOST=127.0.0.1
@@ -48,11 +56,15 @@ DB_USERNAME=root
 DB_PASSWORD=
 
 6. Migrasi dan Seeder
+   
 php artisan migrate
+
 php artisan db:seed
 
-7. Build Asset dan Jalankan
+8. Build Asset dan Jalankan
+   
 npm run dev
+
 php artisan serve
 
 
